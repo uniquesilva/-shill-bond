@@ -1,0 +1,32 @@
+{
+  "name": "shill-bond",
+  "version": "1.0.0",
+  "description": "Shill.bond Platform - A decentralized platform for developers and shillers",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "cd apps/web && npm run dev",
+    "build": "cd apps/web && npm run build",
+    "start": "cd apps/web && npm run start",
+    "install:all": "pnpm install",
+    "clean": "rm -rf node_modules apps/*/node_modules packages/*/node_modules"
+  },
+  "keywords": [
+    "solana",
+    "web3",
+    "defi",
+    "shill",
+    "bond",
+    "nextjs",
+    "anchor"
+  ],
+  "author": "Matthew Silva",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
