@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@auth/mongodb-adapter": "^2.7.2",
+    "@auth/mongodb-adapter": "^3.11.1",
     "@radix-ui/react-compose-refs": "^1.1.1",
     "@radix-ui/react-slot": "^1.1.0",
-    "@swc/helpers": "^0.5.11",
+    "@swc/helpers": "^0.5.17",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.460.0",
@@ -21,7 +21,7 @@
     "next-auth": "5.0.0-beta.29",
     "react": "^18",
     "react-dom": "^18",
-    "scheduler": "^0.24.0",
+    "scheduler": "^0.27.0",
     "superstruct": "^1.0.3",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7"

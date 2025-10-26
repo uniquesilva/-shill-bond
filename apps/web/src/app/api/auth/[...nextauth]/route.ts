@@ -1,7 +1,10 @@
 import NextAuth from 'next-auth';
 import Twitter from 'next-auth/providers/twitter';
+import { MongoDBAdapter } from '@auth/mongodb-adapter';
+import clientPromise from '@/lib/mongodb';
 
 const handler = NextAuth({
+  adapter: MongoDBAdapter(clientPromise),
   providers: [
     Twitter({
       clientId: process.env.NEXT_PUBLIC_TWITTER_CLIENT_ID!,
