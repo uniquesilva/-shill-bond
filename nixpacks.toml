@@ -2,7 +2,7 @@
 nixPkgs = ['nodejs_20', 'python3', 'gcc', 'gnumake', 'pkg-config', 'systemd.dev']
 
 [phases.install]
-cmds = ['cd frontend && npm install --ignore-optional']
+cmds = ['cd frontend && npm install --no-optional --no-audit --no-fund']
 
 [phases.build]
 cmds = ['cd frontend && npm run build']
