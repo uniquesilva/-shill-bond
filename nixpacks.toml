@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ['nodejs_20', 'python3', 'gcc', 'gnumake', 'pkg-config', 'systemd.dev', 'libudev.dev']
+nixPkgs = ['nodejs_20', 'python3', 'gcc', 'gnumake', 'pkg-config', 'systemd.dev']
 
 [phases.install]
 cmds = ['cd frontend && npm install']
