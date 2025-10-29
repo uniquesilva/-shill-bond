@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
-import { X402Client, CreateCampaignParams } from '@x402/sdk';
+import { X402Client, CreateCampaignParams } from '../../lib/x402-client';
 import { PublicKey } from '@solana/web3.js';
 
 interface CampaignCreatorProps {

@@ -19,7 +19,6 @@
     "@solana/wallet-adapter-wallets": "^0.19.32",
     "@solana/web3.js": "^1.87.6",
     "@swc/helpers": "^0.5.11",
-    "@x402/sdk": "file:../sdk",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.460.0",
