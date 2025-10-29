@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useWallet } from '@solana/wallet-adapter-react';
+// import { useWallet } from '@solana/wallet-adapter-react'; // Temporarily disabled
 import { X402Client, CreateCampaignParams } from '../../lib/x402-client';
 import { PublicKey } from '@solana/web3.js';
 
@@ -10,7 +10,9 @@ interface CampaignCreatorProps {
 }
 
 export function CampaignCreator({ onCampaignCreated }: CampaignCreatorProps) {
-  const { publicKey, connected } = useWallet();
+  // const { publicKey, connected } = useWallet(); // Temporarily disabled
+  const publicKey = null; // Placeholder
+  const connected = false; // Placeholder
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     budget: '',
