@@ -2,7 +2,7 @@
 nixPkgs = ['nodejs_20', 'python3', 'gcc', 'gnumake', 'pkg-config', 'systemd.dev']
 
 [phases.install]
-cmds = ['cd frontend && C_INCLUDE_PATH=/nix/store/*-systemd-dev/include:$C_INCLUDE_PATH npm install']
+cmds = ['cd frontend && npm install --ignore-optional']
 
 [phases.build]
 cmds = ['cd frontend && npm run build']
