@@ -1,0 +1,25 @@
+{
+  "name": "x402-oracle-api",
+  "version": "1.0.0",
+  "description": "X402 Protocol Oracle API for X engagement verification",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "verify": "node verify.js",
+    "distribute": "node distribute.js"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.29.0",
+    "@solana/web3.js": "^1.87.6",
+    "axios": "^1.6.0",
+    "bull": "^4.12.0",
+    "cron": "^3.1.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "twitter-api-v2": "^1.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

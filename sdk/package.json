@@ -1,0 +1,34 @@
+{
+  "name": "@x402/sdk",
+  "version": "1.0.0",
+  "description": "X402 Protocol SDK for Solana engagement rewards",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepublish": "npm run build"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.29.0",
+    "@solana/web3.js": "^1.87.6"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "keywords": [
+    "solana",
+    "blockchain",
+    "engagement",
+    "rewards",
+    "x402",
+    "twitter",
+    "social"
+  ],
+  "author": "Shill.bond Team",
+  "license": "MIT"
+}

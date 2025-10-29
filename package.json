@@ -1,32 +1,55 @@
 {
-  "name": "shill-bond",
+  "name": "shill-bond-x402",
   "version": "1.0.0",
-  "description": "Shill.bond Platform - A decentralized platform for developers and shillers",
+  "description": "Shill.bond - The Web3 Performance Network powered by X402 Protocol",
   "private": true,
   "workspaces": [
-    "apps/*",
+    "frontend",
+    "api",
+    "sdk",
     "packages/*"
   ],
   "scripts": {
-    "dev": "cd apps/web && npm run dev",
-    "build": "cd apps/web && npm run build",
-    "start": "cd apps/web && npm run start",
-    "install:all": "pnpm install",
-    "clean": "rm -rf node_modules apps/*/node_modules packages/*/node_modules"
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:api\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:api": "cd api && npm run dev",
+    "build": "npm run build:contracts && npm run build:frontend && npm run build:sdk",
+    "build:contracts": "cd contracts && anchor build",
+    "build:frontend": "cd frontend && npm run build",
+    "build:sdk": "cd sdk && npm run build",
+    "deploy:contracts": "cd contracts && anchor deploy",
+    "start:oracle": "cd api && npm start",
+    "test": "npm run test:contracts",
+    "test:contracts": "cd contracts && anchor test",
+    "clean": "rm -rf node_modules frontend/node_modules api/node_modules sdk/node_modules packages/*/node_modules"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   },
   "keywords": [
     "solana",
+    "blockchain",
+    "engagement",
+    "rewards",
+    "x402",
+    "twitter",
+    "social",
     "web3",
     "defi",
-    "shill",
-    "bond",
-    "nextjs",
-    "anchor"
+    "oracle"
   ],
-  "author": "Matthew Silva",
+  "author": "Shill.bond Team",
   "license": "MIT",
-  "engines": {
-    "node": ">=18.0.0",
-    "pnpm": ">=8.0.0"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uniquesilva/shill-bond.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uniquesilva/shill-bond/issues"
+  },
+  "homepage": "https://shill.bond"
 }

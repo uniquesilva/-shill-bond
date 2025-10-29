@@ -1,0 +1,21 @@
+[package]
+name = "x402_protocol"
+version = "0.1.0"
+description = "X402 Protocol - Automated On-Chain Rewards for X Engagement"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "x402_protocol"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.29.0"
+anchor-spl = "0.29.0"
+solana-program = "~1.16.0"
