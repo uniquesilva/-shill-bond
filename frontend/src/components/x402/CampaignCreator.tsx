@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 // import { useWallet } from '@solana/wallet-adapter-react'; // Temporarily disabled
 import { X402Client, CreateCampaignParams } from '../../lib/x402-client';
-import { PublicKey } from '@solana/web3.js';
+// import { PublicKey } from '@solana/web3.js'; // Temporarily disabled
 
 interface CampaignCreatorProps {
   onCampaignCreated?: (txHash: string) => void;
@@ -41,7 +41,7 @@ export function CampaignCreator({ onCampaignCreated }: CampaignCreatorProps) {
         rewardPerEngagement: parseFloat(formData.rewardPerEngagement) * 1_000_000_000,
         goalEngagements: parseInt(formData.goalEngagements),
         hashtag: formData.hashtag,
-        oracle: new PublicKey('11111111111111111111111111111111'), // Placeholder oracle
+        oracle: '11111111111111111111111111111111', // Placeholder oracle
       };
 
       const txHash = await x402Client.createCampaign(params);

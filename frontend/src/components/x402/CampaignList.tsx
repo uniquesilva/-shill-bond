@@ -3,11 +3,11 @@
 import React, { useState, useEffect } from 'react';
 // import { useWallet } from '@solana/wallet-adapter-react'; // Temporarily disabled
 import { X402Client, CampaignData } from '../../lib/x402-client';
-import { PublicKey } from '@solana/web3.js';
+// import { PublicKey } from '@solana/web3.js'; // Temporarily disabled
 
 interface CampaignItemProps {
   campaign: CampaignData;
-  address: PublicKey;
+  address: string; // Changed from PublicKey to string
   x402Client: X402Client;
 }
 
@@ -73,7 +73,7 @@ function CampaignItem({ campaign, address, x402Client }: CampaignItemProps) {
 export function CampaignList() {
   // const { connected } = useWallet(); // Temporarily disabled
   const connected = false; // Placeholder
-  const [campaigns, setCampaigns] = useState<Array<{ publicKey: PublicKey; account: CampaignData }>>([]);
+  const [campaigns, setCampaigns] = useState<Array<{ publicKey: string; account: CampaignData }>>([]);
   const [loading, setLoading] = useState(true);
   const [x402Client, setX402Client] = useState<X402Client | null>(null);
 
